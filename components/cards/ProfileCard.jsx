@@ -104,9 +104,9 @@ const ProfileCard = ({ userData, activeTab }) => {
       <div className="flex gap-6">
         {tabs.map((tab) => (
           <Link
-            className={`tab ${
-              activeTab === tab.name ? "bg-purple-1" : "bg-dark-2"
-            }`}
+            key={tab.name}
+            className={`tab ${activeTab === tab.name ? "bg-purple-1" : "bg-dark-2"
+              }`}
             href={`/profile/${userData._id}/${tab.link}`}
           >
             {tab.name}
